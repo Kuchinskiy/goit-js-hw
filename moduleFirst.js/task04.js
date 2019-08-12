@@ -9,7 +9,7 @@ let howMuchIs = prompt('Сколько дроидов вы готовы купи
 if (howMuchIs === null) {
     console.log('Отменено пользователем!');
 } else if (Number.isNaN(Number(howMuchIs))) {
-    console.log('Извините вы не выбрали количество!');
+    console.log('Извините, вы не выбрали количество!');
 } else {
     totalPrice = Number(howMuchIs) * pricePerDroid;
     if (totalPrice > credits) {
