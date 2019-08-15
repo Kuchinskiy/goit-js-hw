@@ -139,6 +139,7 @@
 
 //  ternary (тройной) :
 // const type = age >= 17 ? 'adult' : 'child';
+// const переменная = условие ?(if) опция1 :(else) опция2;
 
 // СВОЙСТВА И МЕТОДЫ СТРОК 
 // indexOf() - вернет позицию (индекс) на которой находится первое совпадение подстроки или -1, 
@@ -153,3 +154,80 @@
 
 // const massage = 'qwerty';
 // console.log(massage. includes('b')); // false
+
+
+// SWITCH только когда идет сравнение ' === ' и никак не иначе :
+
+// let cost;
+// const subscription = 'premium';
+
+// switch (subscription) {
+//   case 'free':
+//     cost = 0;
+//     break;
+
+//   case 'pro':
+//     cost = 100;
+//     break;
+
+//   case 'premium':
+//     cost = 500;
+//     break;
+
+//   default:
+//     console.log('Invalid subscription type');
+// }
+
+// console.log(cost);
+
+// if и else используем когда используем логические операторы : &&  ||  >  <  ;
+
+//  ЦИКЛЫ :
+
+// -----While(...) с предусловием----- 
+// До тех пор пока "УСЛОВИЕ TRUE" продолжает выполнять тело цикла, проверяет УСЛОВИЕ затем
+// идет выполнять тело и вновь возвращается к условию и так до бессконечности.
+
+// let counter = 0;
+// const products = ['apple', 'banana', 'orange'];
+
+// while (counter < products.length) {
+//     console.log(products[counter]);
+
+//     counter +=1;
+// }
+
+// -----do.-.while-----  c постусловием(условие после), выполняется хотя бы один раз, далее идет
+// смотреть условие :
+
+// let userInput;
+
+// do {
+//     userInput = prompt('Enter 1, 2, 3');
+//     console.log(userInput);
+// }while(userInput === null);
+
+// WHILE & DO ----- НЕ используется для перебора массивов!!! Важно помнить!!!
+
+// Object :
+
+// const fruits = [
+//     {name: 'apple', total:200, isFresh: true},
+//     {name: 'orange', total:500, isFresh: true},
+//     {name: 'bananas', total:700, isFresh: true},
+// ];
+
+// console.log(fruits);
+
+// for (let key of fruits) {
+//     if (key.name === 'orange') {
+//         console.table(key);
+//     }
+// }
+
+// const products = ['apple', 'grape', 'banana'];
+
+// for (let i = 0; i < products.length; i += 1) {
+//     console.log(`i: `, i);
+//     console.log(`products[${i}]:`, products[i]);
+// }
