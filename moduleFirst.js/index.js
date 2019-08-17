@@ -231,3 +231,60 @@
 //     console.log(`i: `, i);
 //     console.log(`products[${i}]:`, products[i]);
 // }
+
+
+
+// const clients = [1, 2, 3, 4, 5].splice(2, 2, 6, 7);
+// console.log(clients);
+
+// const add = function(x, y) {
+
+//     const num = x + y;
+
+//     console.log('Enter function...');
+
+
+//     return num;
+
+// }
+// const resA = add(2, 3);
+// console.log('Result 2 + 3: ', resA);
+
+// add(2, 7);
+// add(4, 3);
+// add(5, 4);
+
+// let counter = 0;
+
+// while (counter < 10) {
+//     console.log('counter: ', counter);
+//     counter += 1;
+// }
+
+
+
+// Counter sheep :
+
+// while:
+
+// let sheepCounted = 0;
+
+// while (sheepCounted < 10) {
+//     console.log(`I have counted ${sheepCounted} sheep!`);
+//     sheepCounted++;
+// }
+// console.log('Zzzzzzzzzzzz');
+
+// for:
+
+// for (let sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+//     console.log(`I have counted ${sheepCounted} sheep!`);
+// }
+// console.log('Zzzzzzzzzzzzzzz');
+
+
+// let timesToSayHello = 7;
+
+// for (let i = 0; i < timesToSayHello; i++) {
+//     console.log('Hello!');
+// }
