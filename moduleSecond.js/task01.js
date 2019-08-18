@@ -48,3 +48,4 @@ console.log('index:', index);
 
 users.splice(index, 0, 'Kong');
 console.log(users);
+
