@@ -23,7 +23,10 @@ for (const key of keys) {
     }
 }
 
-return name;
+return {
+    name,
+    numberOfTasks: max,
+};
 
 }
 
