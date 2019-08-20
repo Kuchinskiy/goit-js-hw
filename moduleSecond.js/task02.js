@@ -1,7 +1,13 @@
 'use strict';
 
-// const arr = ['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong'];
+function logItems(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(`${i} - ${i + 1} - ${array[i]}`);
+    }
+}
 
-// function logItems(arr) {
-    
-// }
+// Вызовы функции для проверки:
+
+logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+
+// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
