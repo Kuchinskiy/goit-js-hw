@@ -1,16 +1,34 @@
-'use strict';
+"use strict";
 
-const ADMIN_PASSWORD ='qwerty';
-let massage;
+/*
+* Напиши скрипт имитирующий авторизацию администратора в панели управления.
 
-const code = prompt('Введите пароль');
+* Есть переменная message в которую будет записано сообщение о результате.
+* При загрузке страницы у посетителя запрашивается пароль через prompt:
 
-if (code === null) {
-    massage = 'Отменено пользователем!';
-} else if (code === ADMIN_PASSWORD) {
-    massage = 'Добро пожаловать!';
-} else {
-    massage = 'Доступ запрещен, неверный пароль!';
-}
+* Если нажали Cancel, записать в message строку 'Отменено пользователем!'
 
-alert(massage);
+* В противном случае, если введен пароль который совпадает со значением константы ADMIN_PASSWORD,
+* записать в message строку 'Добро пожаловать!'
+
+* В противном случае, то есть если ни одно из предыдущих условий не выполнилось,
+* записать в message строку 'Доступ запрещен, неверный пароль!'
+
+* После всех проверок вывести в alert значение переменной message.
+*/
+
+// const ADMIN_PASSWORD = "jqueryismyjam";
+// let massage;
+
+
+// const userPassword = prompt("Введите ваш пароль :");
+
+// if (userPassword === null || userPassword === "") {
+//   massage = "Отменено пользователем!";
+// } else if (userPassword === ADMIN_PASSWORD) {
+//   massage = "Добро пожаловать!";
+// } else {
+//   massage = "Доступ запрещен, неверный пароль!";
+// }
+
+// alert(massage);

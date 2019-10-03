@@ -1,57 +1,79 @@
 "use strict";
 
-let deliveryCountry = prompt("Укажите в какую страну будет доставка!");
-// console.log(deliveryCountry);
+/*
+* Пользователь может оформить доставку товара к себе в страну,
+* указав ее при посещении страницы в prompt.
+* Учти, что пользователь может ввести имя страны не только буквами
+* нижнего регистра, а к примеру 'кИтАЙ'.
 
-const countryChina = "китай";
-const countryChili = "чили";
-const countryAustralia = "австралия";
-const countryIndia = "индия";
-const countryJamaica = "ямайка";
+* Название страны должно начинатся с заглавной буквы,
+* а остальные символы записаныe строчными.
+* Напиши скрипт который выводит сообщение о стоимости доставки в указанную страну.
+* Формат сообщения:  'Доставка в [страна] будет стоить [цена] кредитов';
 
-const priceChina = 100;
-const priceChili = 250;
-const priceAustralia = 170;
-const priceIndia = 80;
-const priceJamaica = 120;
+* Но доставка есть не везде, если указанной страны нет в списке,
+* то выводи в сообщение: 'В вашу страну доставка не доступна';
 
-if (deliveryCountry === null) {
-  console.log("Выберите страну!");
-} else {
-  deliveryCountry = deliveryCountry.toLowerCase();
+* Ниже приведен список стран и стоимость доставки:
 
-  switch (deliveryCountry) {
-    case countryChina:
-      alert(
-        `Доставка в ${countryChina[0].toUpperCase() +
-          countryChina.slice(1)} будет стоить ${priceChina} кредитов.`
-      );
-      break;
-    case countryChili:
-      alert(
-        `Доставка в ${countryChili[0].toUpperCase() +
-          countryChili.slice(1)} будет стоить ${priceChili} кредитов.`
-      );
-      break;
-    case countryAustralia:
-      alert(
-        `Доставка в ${countryAustralia[0].toUpperCase() +
-          countryAustralia.slice(1)} будет стоить ${priceAustralia} кредитов.`
-      );
-      break;
-    case countryIndia:
-      alert(
-        `Доставка в ${countryIndia[0].toUpperCase() +
-          countryIndia.slice(1)} будет стоить ${priceIndia} кредитов.`
-      );
-      break;
-    case countryJamaica:
-      alert(
-        `Доставка в ${countryJamaica[0].toUpperCase() +
-          countryJamaica.slice(1)} будет стоить ${priceJamaica} кредитов.`
-      );
-      break;
-    default:
-      alert(`В вашей стране доставка недоступна!`);
-  }
-}
+*  -->>  Китай - 100 кредитов
+*  -->>  Чили - 250 кредитов
+*  -->>  Австралия - 170 кредитов
+*  -->>  Индия - 80 кредитов
+*  -->>  Ямайка - 120 кредитов
+
+*  P.S Обязательно используй switch.
+*/
+
+const deliveryInChina = "китай";
+const deliveryInChili = "чили";
+const deliveryInAustralia = "австралия";
+const deliveryInIndia = "индия";
+const deliveryInJamaica = "ямайка";
+
+const costInChina = 100;
+const costInChili = 250;
+const costInAustralia = 170;
+const costInIndia = 80;
+const costInJamaica = 120;
+
+const deliveryCountry = prompt("Укажите в какую страну будет доставка!");
+
+// if (deliveryCountry === null) {
+//   console.log("Надеемся следующий раз,Вы сделаете выбор!");
+// } // как вариант, если клиент нажмет Cancel
+
+switch (deliveryCountry) {
+  case deliveryInChina:
+    alert(
+      `Доставка в ${deliveryInChina[0].toUpperCase() +
+        deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов.`
+    );
+    break;
+  case deliveryInChili:
+    alert(
+      `Доставка в ${deliveryInChili[0].toUpperCase() +
+        deliveryInChili.slice(1)} будет стоить ${costInChili} кредитов.`
+    );
+    break;
+  case deliveryInAustralia:
+    alert(
+      `Доставка в ${deliveryInAustralia[0].toUpperCase() +
+        deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов.`
+    );
+    break;
+  case deliveryInIndia:
+    alert(
+      `Доставка в ${deliveryInIndia[0].toUpperCase() +
+        deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов.`
+    );
+    break;
+  case deliveryInJamaica:
+    alert(
+      `Доставка в ${deliveryInJamaica[0].toUpperCase() +
+        deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов.`
+    );
+    break;
+  default:
+    alert(`В вашей стране доставка недоступна!`);
+};
