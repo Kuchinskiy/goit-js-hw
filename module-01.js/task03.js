@@ -17,18 +17,18 @@
 * После всех проверок вывести в alert значение переменной message.
 */
 
-// const ADMIN_PASSWORD = "jqueryismyjam";
-// let massage;
+const ADMIN_PASSWORD = "jqueryismyjam";
+let massage;
 
 
-// const userPassword = prompt("Введите ваш пароль :");
+const userPassword = prompt("Введите ваш пароль :");
 
-// if (userPassword === null || userPassword === "") {
-//   massage = "Отменено пользователем!";
-// } else if (userPassword === ADMIN_PASSWORD) {
-//   massage = "Добро пожаловать!";
-// } else {
-//   massage = "Доступ запрещен, неверный пароль!";
-// }
+if (userPassword === null || userPassword === "") {
+  massage = "Отменено пользователем!";
+} else if (userPassword === ADMIN_PASSWORD) {
+  massage = "Добро пожаловать!";
+} else {
+  massage = "Доступ запрещен, неверный пароль!";
+}
 
-// alert(massage);
+alert(massage);
