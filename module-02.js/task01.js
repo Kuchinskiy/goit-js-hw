@@ -1,51 +1,50 @@
-'use strict';
+"use strict";
 
-const users = ['Mango', 'Poly', 'Ajax', 'Chelsey'];
+/*
+* Напиши функцию logItems(array), которая получает массив и использует цикл for,
+* который для каждого элемента массива будет выводить в консоль
+* сообщение в формате [номер элемента] - [значение элемента].
 
-// Удалить первый элемент массива:
+* Нумерация должна начинаться с '1'. К примеру для первого элемента 
+* массива ['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено '1 - Mango',
+* а для индекса 2 выведет '3 - Ajax'.
 
-console.log(users.shift()); 
-console.log(users);// ["Poly", "Ajax", "Chelsey"]
+* Вызовы функции для проверки работоспособности твоей реализации:
 
-
-// Удалить последний элемент массива:
-
-console.log(users.pop());
-console.log(users);// ["Poly", "Ajax"]
-
-
-
-// Добавить в начало массива пользователя "Lux":
-
-users.unshift('Lux');
-console.log(users);
+* -->>-- logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+* -->>-- logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+*/
 
 
-// Добавить в конец массива два пользователя ("Jay" и "Kiwi") за одну операцию:
+// -->> function expression
 
-users.push('Jay', 'Kiwi');
-console.log(users);
+const logItems = function(array) {
+  let num = 1;
+  const users = ["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"];
+  for (let j = 0; j < users.length; j++) {
+    console.log(`${num} - ${users[j]}`);
+    num += 1;
+  }
+  return array;
+};
+// Вызовы функции для проверки:
+logItems();
+
+// !!! На мой взгляд функциональное выражение более понятное и исчерпывающие,
+// !!! так как в полном объеме дает понимания, что происходит когда смотришь
+// !!! на код. 
+// ??? Или тут по ситуации и под конкретную задачу,из этого надо исходить!?
+// ??? Как вы считаете!?!? ваш взгляд как специалиста.
 
 
-// Удалить из массива элемент хранящийся в переменной userToDelete:
+// -->> function declaration
 
-const userToDelete = 'Ajax';
-let index = users.indexOf(userToDelete);
-console.log('index:', index);
+// function logItems (array) {
+//     for (let j = 0; j < array.length; j++) {
+//         console.log(`${j + 1} - ${array[j]}`);
+//     }
+// }
 
-users.splice(index, 1);
-console.log(users);
-
-
-// Добавить в массив пользователя хранящегося в переменной userToInsert,
-// перед пользователем хранящимся в переменной insertBefore:
-
-const userToInsert = 'Kong';
-const insertBefore = 'Jay';
-
-index = users.indexOf(insertBefore);
-console.log('index:', index);
-
-users.splice(index, 0, 'Kong');
-console.log(users);
-
+// Вызовы функции для проверки:
+// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);

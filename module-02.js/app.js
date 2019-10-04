@@ -10,29 +10,56 @@
 
 // -----------------------------------------------------------------------
 
-// const animals = ['Lion', 'Flamingo', 'Polar Bear', 'Boa Constrictor'];
+/*
+ * Есть массив имен пользователей
+ * Используя методы массива, последовательно выполни указанные операции;
+ */
 
-// for (let i = 0; i < animals.length; i++) {
-//     console.log(`This zoo contains a ${animals[i]}.`);
-// }
-// console.log('animals length:', animals.length);
+const users = ['Mango', 'Poly', 'Ajax', 'Chelsey'];
 
+// Удалить первый элемент массива:
 
-// const name = 'Nick';
-
-// for (let i = 0; i < name.length; i++) {
-//     console.log(`My name contains the letter ${name[i]}.`)
-// }
-
-// ---------------------------------------------------------------------------
-
-// const timesToSayHello = 3;
-
-// for (let i = 0; i < timesToSayHello; i++) {
-//     console.log('Hello:', timesToSayHello);
-// }
+console.log(users.shift()); 
+console.log(users);// ["Poly", "Ajax", "Chelsey"]
 
 
-// for (let x = 2; x < 10000; x = x * 2) {
-//     console.log(x);
-// }
+// Удалить последний элемент массива:
+
+console.log(users.pop());
+console.log(users);// ["Poly", "Ajax"]
+
+
+
+// Добавить в начало массива пользователя "Lux":
+
+users.unshift('Lux');
+console.log(users);
+
+
+// Добавить в конец массива два пользователя ("Jay" и "Kiwi") за одну операцию:
+
+users.push('Jay', 'Kiwi');
+console.log(users);
+
+
+// Удалить из массива элемент хранящийся в переменной userToDelete:
+
+const userToDelete = 'Ajax';
+let index = users.indexOf(userToDelete);
+console.log('index:', index);
+
+users.splice(index, 1);
+console.log(users);
+
+
+// Добавить в массив пользователя хранящегося в переменной userToInsert,
+// перед пользователем хранящимся в переменной insertBefore:
+
+const userToInsert = 'Kong';
+const insertBefore = 'Jay';
+
+index = users.indexOf(insertBefore);
+console.log('index:', index);
+
+users.splice(index, 0, 'Kong');
+console.log(users);
