@@ -8,6 +8,7 @@
 * и возвращающую цену гравировки.
 */
 
+// Вариант-1
 const calculateEngravingPrice = function(string, pricePerWord = 40) {
   const words = string.split(" ");
   const total = words.length * pricePerWord;
@@ -15,9 +16,11 @@ const calculateEngravingPrice = function(string, pricePerWord = 40) {
   return total;
 };
 
+// Вариант-2
 const calculateEngravingPrice = (string, pricePerWord) =>
   string.split(" ").length * pricePerWord;
 
+  
 // Вызовы функции для проверки:
 
 console.log(
