@@ -1,13 +1,9 @@
 'use strict';
 
-function logItems(array) {
-    for (let i = 0; i < array.length; i++) {
-        console.log(`${i} - ${i + 1} - ${array[i]}`);
-    }
-}
+/*
+* Напиши скрипт подсчета стоимости гравировки украшений. 
+* Для этого создай функцию calculateEngravingPrice(message, pricePerWord) 
+* принимающую строку (в строке будут только слова и пробелы) и цену гравировки одного слова,
+* и возвращающую цену гравировки.
+*/
 
-// Вызовы функции для проверки:
-
-logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
-
-// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);

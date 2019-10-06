@@ -28,23 +28,27 @@ const logItems = function(array) {
   return array;
 };
 // Вызовы функции для проверки:
+
 logItems();
+logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+
 
 // !!! На мой взгляд функциональное выражение более понятное и исчерпывающие,
 // !!! так как в полном объеме дает понимания, что происходит когда смотришь
 // !!! на код. 
-// ??? Или тут по ситуации и под конкретную задачу,из этого надо исходить!?
+// ??? Или тут по ситуации и под конкретную задачу надо исходить!?
 // ??? Как вы считаете!?!? ваш взгляд как специалиста.
 
 
 // -->> function declaration
 
-// function logItems (array) {
-//     for (let j = 0; j < array.length; j++) {
-//         console.log(`${j + 1} - ${array[j]}`);
-//     }
-// }
+function logItems (array) {
+    for (let j = 0; j < array.length; j++) {
+        console.log(`${j + 1} - ${array[j]}`);
+    }
+}
 
 // Вызовы функции для проверки:
-// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
-// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
