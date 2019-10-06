@@ -15,6 +15,11 @@ const calculateEngravingPrice = function(string, pricePerWord = 40) {
   return total;
 };
 
+const calculateEngravingPrice = (string, pricePerWord) =>
+  string.split(" ").length * pricePerWord;
+
+// Вызовы функции для проверки:
+
 console.log(
   calculateEngravingPrice(
     "Proin sociis natoque et magnis parturient montes mus",
@@ -29,5 +34,5 @@ console.log(
   )
 ); // 160
 
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est")); // 200 параметр по умолчанию -->> (40) 
+console.log(calculateEngravingPrice("Donec orci lectus aliquam est")); // 200 параметр по умолчанию -->> (40)
 console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 20)); // 100

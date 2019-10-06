@@ -1,24 +1,27 @@
 "use strict";
 
-const calculateEngravingPrice = (message, pricePerWord) =>
-  message.split(" ").length * pricePerWord;
+/*
+ * Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку
+ * (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
+ */
+
+const findLongestWord = function(string) {
+  const words = string.split(" ");
+  let longestWord = words[0];
+
+  for (const word of words) {
+    if (longestWord.length < word.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+};
 
 // Вызовы функции для проверки:
 
-console.log(
-  calculateEngravingPrice(
-    "Proin sociis natoque et magnis parturient montes mus",
-    10
-  )
-); // 80
-
-console.log(
-  calculateEngravingPrice(
-    "Proin sociis natoque et magnis parturient montes mus",
-    20
-  )
-); // 160
-
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 40)); // 200
-
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 20)); // 100
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// 'jumped'
+console.log(findLongestWord("Google do a roll"));
+// 'Google'
+console.log(findLongestWord("May the force be with you"));
+// 'force'
