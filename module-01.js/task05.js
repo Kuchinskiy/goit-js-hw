@@ -25,55 +25,96 @@
 *  P.S Обязательно используй switch.
 */
 
-const deliveryInChina = "китай";
-const deliveryInChili = "чили";
-const deliveryInAustralia = "австралия";
-const deliveryInIndia = "индия";
-const deliveryInJamaica = "ямайка";
+// const deliveryInChina = "китай";
+// const deliveryInChili = "чили";
+// const deliveryInAustralia = "австралия";
+// const deliveryInIndia = "индия";
+// const deliveryInJamaica = "ямайка";
 
-const costInChina = 100;
-const costInChili = 250;
-const costInAustralia = 170;
-const costInIndia = 80;
-const costInJamaica = 120;
+// const costInChina = 100;
+// const costInChili = 250;
+// const costInAustralia = 170;
+// const costInIndia = 80;
+// const costInJamaica = 120;
 
-const deliveryCountry = prompt("Укажите в какую страну будет доставка!");
+// const deliveryCountry = prompt("Укажите в какую страну будет доставка!");
 
-// if (deliveryCountry === null) {
-//   console.log("Надеемся следующий раз,Вы сделаете выбор!");
-// } // как вариант, если клиент нажмет Cancel
+// switch (deliveryCountry) {
+//   case deliveryInChina:
+//     alert(
+//       `Доставка в ${deliveryInChina[0].toUpperCase() +
+//         deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов.`
+//     );
+//     break;
+//   case deliveryInChili:
+//     alert(
+//       `Доставка в ${deliveryInChili[0].toUpperCase() +
+//         deliveryInChili.slice(1)} будет стоить ${costInChili} кредитов.`
+//     );
+//     break;
+//   case deliveryInAustralia:
+//     alert(
+//       `Доставка в ${deliveryInAustralia[0].toUpperCase() +
+//         deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов.`
+//     );
+//     break;
+//   case deliveryInIndia:
+//     alert(
+//       `Доставка в ${deliveryInIndia[0].toUpperCase() +
+//         deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов.`
+//     );
+//     break;
+//   case deliveryInJamaica:
+//     alert(
+//       `Доставка в ${deliveryInJamaica[0].toUpperCase() +
+//         deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов.`
+//     );
+//     break;
+//   default:
+//     alert(`В вашей стране доставка недоступна!`);
+// };
 
-switch (deliveryCountry) {
-  case deliveryInChina:
-    alert(
-      `Доставка в ${deliveryInChina[0].toUpperCase() +
-        deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов.`
-    );
-    break;
-  case deliveryInChili:
-    alert(
-      `Доставка в ${deliveryInChili[0].toUpperCase() +
-        deliveryInChili.slice(1)} будет стоить ${costInChili} кредитов.`
-    );
-    break;
-  case deliveryInAustralia:
-    alert(
-      `Доставка в ${deliveryInAustralia[0].toUpperCase() +
-        deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов.`
-    );
-    break;
-  case deliveryInIndia:
-    alert(
-      `Доставка в ${deliveryInIndia[0].toUpperCase() +
-        deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов.`
-    );
-    break;
-  case deliveryInJamaica:
-    alert(
-      `Доставка в ${deliveryInJamaica[0].toUpperCase() +
-        deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов.`
-    );
-    break;
-  default:
-    alert(`В вашей стране доставка недоступна!`);
-};
+// ------------------------------------------------------------------------------------------
+
+// Более рациональный подход в написании инструкции
+
+// const PRINT_COUNTRY = "Укажите в какую страну будет доставка";
+// const CANCEL = "Отменено пользователем!";
+// const NOT_DELIVERY = "В вашей стране доставка не доступна";
+
+// let message = prompt(PRINT_COUNTRY);
+// let price = 0;
+
+// if (message === null) {
+//   message = CANCEL;
+// } else {
+//   const countryName = message[0].toUpperCase() + message.slice(1).toLowerCase();
+
+//   switch (countryName) {
+//     case "Китай":
+//       price = 100;
+//       break;
+
+//     case "Чили":
+//       price = 250;
+//       break;
+
+//     case "Австралия":
+//       price = 170;
+//       break;
+
+//     case "Индия":
+//       price = 80;
+//       break;
+//     case "Ямайка":
+//       price = 120;
+//       break;
+//     default:
+//       message = NOT_DELIVERY;
+//   }
+// }
+
+// if (prise > 0) {
+//   message = `Доставка в ${countryName} будет стоить ${price} кредитов`;
+// }
+// alert(message);
