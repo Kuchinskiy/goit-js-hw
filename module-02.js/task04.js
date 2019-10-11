@@ -16,7 +16,7 @@ const formatString = (str) => {
 };
 
 
-// Вариант с тернарным оператором:
+// Вариант с тернарным оператором от (G.G):
 
 // const formatString = (str, value = 40) =>
 //   str.length > value ? `${str.slice(0, 40)}...` : str;
