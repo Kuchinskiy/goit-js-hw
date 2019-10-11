@@ -25,96 +25,104 @@
 *  P.S Обязательно используй switch.
 */
 
-// const deliveryInChina = "китай";
-// const deliveryInChili = "чили";
-// const deliveryInAustralia = "австралия";
-// const deliveryInIndia = "индия";
-// const deliveryInJamaica = "ямайка";
+const deliveryInChina = "китай";
+const deliveryInChili = "чили";
+const deliveryInAustralia = "австралия";
+const deliveryInIndia = "индия";
+const deliveryInJamaica = "ямайка";
 
-// const costInChina = 100;
-// const costInChili = 250;
-// const costInAustralia = 170;
-// const costInIndia = 80;
-// const costInJamaica = 120;
+const costInChina = 100;
+const costInChili = 250;
+const costInAustralia = 170;
+const costInIndia = 80;
+const costInJamaica = 120;
 
-// const deliveryCountry = prompt("Укажите в какую страну будет доставка!");
+const deliveryCountry = prompt("Укажите в какую страну будет доставка!");
 
-// switch (deliveryCountry) {
-//   case deliveryInChina:
-//     alert(
-//       `Доставка в ${deliveryInChina[0].toUpperCase() +
-//         deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов.`
-//     );
-//     break;
-//   case deliveryInChili:
-//     alert(
-//       `Доставка в ${deliveryInChili[0].toUpperCase() +
-//         deliveryInChili.slice(1)} будет стоить ${costInChili} кредитов.`
-//     );
-//     break;
-//   case deliveryInAustralia:
-//     alert(
-//       `Доставка в ${deliveryInAustralia[0].toUpperCase() +
-//         deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов.`
-//     );
-//     break;
-//   case deliveryInIndia:
-//     alert(
-//       `Доставка в ${deliveryInIndia[0].toUpperCase() +
-//         deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов.`
-//     );
-//     break;
-//   case deliveryInJamaica:
-//     alert(
-//       `Доставка в ${deliveryInJamaica[0].toUpperCase() +
-//         deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов.`
-//     );
-//     break;
-//   default:
-//     alert(`В вашей стране доставка недоступна!`);
-// };
+switch (deliveryCountry) {
+  case deliveryInChina:
+    alert(
+      `Доставка в ${deliveryInChina[0].toUpperCase() +
+        deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов.`
+    );
+    break;
+  case deliveryInChili:
+    alert(
+      `Доставка в ${deliveryInChili[0].toUpperCase() +
+        deliveryInChili.slice(1)} будет стоить ${costInChili} кредитов.`
+    );
+    break;
+  case deliveryInAustralia:
+    alert(
+      `Доставка в ${deliveryInAustralia[0].toUpperCase() +
+        deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов.`
+    );
+    break;
+  case deliveryInIndia:
+    alert(
+      `Доставка в ${deliveryInIndia[0].toUpperCase() +
+        deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов.`
+    );
+    break;
+  case deliveryInJamaica:
+    alert(
+      `Доставка в ${deliveryInJamaica[0].toUpperCase() +
+        deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов.`
+    );
+    break;
+  default:
+    alert(`В вашей стране доставка недоступна!`);
+};
 
 // ------------------------------------------------------------------------------------------
 
-// Более рациональный подход в написании инструкции
+// Еще один вариант исполнения инструкций ветвления (if...else, switch)
 
-// const PRINT_COUNTRY = "Укажите в какую страну будет доставка";
-// const CANCEL = "Отменено пользователем!";
-// const NOT_DELIVERY = "В вашей стране доставка не доступна";
+const CHINA = "Китай";
+const CHILI = "Чили";
+const AUSTRALIA = "Австралия";
+const INDIA = "Индия";
+const JAMAICA = "Ямайка";
 
-// let message = prompt(PRINT_COUNTRY);
-// let price = 0;
+const PRINT_COUNTRY = "Укажите в какую страну будет доставка";
+const CANCEL = "Отменено пользователем!";
+const NOT_DELIVERY = "В вашей стране доставка не доступна";
 
-// if (message === null) {
-//   message = CANCEL;
-// } else {
-//   const countryName = message[0].toUpperCase() + message.slice(1).toLowerCase();
+let message = prompt(PRINT_COUNTRY);
+let price = 0;
 
-//   switch (countryName) {
-//     case "Китай":
-//       price = 100;
-//       break;
+if (message === null) {
+  message = CANCEL;
+} else {
+  const countryName = message[0].toUpperCase() + message.slice(1).toLowerCase();
+    console.log('countryName', countryName)
+  switch (countryName) {
+    case CHINA:
+      price = 100;
+      break;
 
-//     case "Чили":
-//       price = 250;
-//       break;
+    case CHILI:
+      price = 250;
+      break;
 
-//     case "Австралия":
-//       price = 170;
-//       break;
+    case AUSTRALIA:
+      price = 170;
+      break;
 
-//     case "Индия":
-//       price = 80;
-//       break;
-//     case "Ямайка":
-//       price = 120;
-//       break;
-//     default:
-//       message = NOT_DELIVERY;
-//   }
-// }
+    case INDIA :
+      price = 80;
+      break;
 
-// if (prise > 0) {
-//   message = `Доставка в ${countryName} будет стоить ${price} кредитов`;
-// }
-// alert(message);
+    case JAMAICA:
+      price = 120;
+      break;
+
+    default:
+      message = NOT_DELIVERY;
+  }
+  
+  if (price > 0) {
+    message = `Доставка в ${countryName} будет стоить ${price} кредитов`;
+  }
+}
+alert(message);
