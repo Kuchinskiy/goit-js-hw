@@ -9,13 +9,9 @@
  */
 
 const checkForSpam = str => {
-  if (
-    str.toLowerCase().includes('sale') ||
-    str.toLowerCase().includes('spam')
-  ) {
-    return true;
-  }
-  return false;
+  return (
+    str.toLowerCase().includes("sale") || str.toLowerCase().includes("spam")
+  );
 };
 
 // Вызовы функции для проверки:
