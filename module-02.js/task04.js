@@ -8,38 +8,35 @@
  */
 
 
-
-// const formatString = function (str, value) {
-//   const characters = [];
-//   for (const symb of str) {
-//     if (symb < value) {
-//       characters.push(symb);
-//     } else if (symb > value) {
-//       characters.push(symb);
-//     }
-//   }
-
-//   return characters;
-// };
+const formatString = (str) => {
+    if (str.length > 40) {
+        return (`${str.slice(0, 40)}...`);
+    }
+    return str;
+};
 
 
+// Вариант с тернарным оператором:
+
+// const formatString = (str, value = 40) =>
+//   str.length > value ? `${str.slice(0, 40)}...` : str;
 
 
 // Вызовы функции для проверки:
 
-// console.log(formatString("Curabitur ligula sapien, tincidunt non."));
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка
 
-// console.log(formatString("Vestibulum facilisis, purus nec pulvinar iculis."));
+console.log(formatString("Vestibulum facilisis, purus nec pulvinar iculis."));
 // вернется форматированная строка
 
-// console.log(formatString("Curabitur ligula sapien."));
+console.log(formatString("Curabitur ligula sapien."));
 // вернется оригинальная строка
 
-// console.log(
-//   formatString(
-//     "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
-//   )
-// );
+console.log(
+  formatString(
+    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
+  )
+);
 // вернется форматированная строка
 
