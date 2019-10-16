@@ -37,5 +37,5 @@ console.log(
   )
 ); // 160
 
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est")); // 200 параметр по умолчанию -->> (40)
+console.log(calculateEngravingPrice("Donec orci lectus aliquam est")); // 200 -->> параметр по умолчанию -->> (40)
 console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 20)); // 100

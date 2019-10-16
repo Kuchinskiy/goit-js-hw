@@ -12,8 +12,42 @@
 *   не пустой, необходимо посчитать сумму всех элементов массива и записать ее в
 *   переменную total. Используй цикл for или for...of. 
 *   После чего в консоль выведи строку 'Общая сумма чисел равна [сумма]'.
+
+* -->>> let input;
+* -->>> const numbers = [];
+* -->>> let total = 0;
 */
 
-let input;
-const numbers = [];
-let total = 0;
+
+const getNumber = () => {
+  const numbers = [];
+  let input;
+
+  do {
+    input = prompt("Введите число!");
+    if (Number.isNaN(Number(input)) || input === " ") {
+      alert("Было введено не число, попробуйте еще раз");
+    } else {
+      numbers.push(Number(input));
+    }
+  } while (input !== null);
+
+  return numbers;
+};
+
+const arrTotal = (numbers) => {
+  let total = 0;
+  if (numbers.length > 0) {
+    for (const number of numbers) {
+      total += number;
+    }
+  }
+  return total;
+};
+
+const printSum = (total) => total > 0
+    ? `Общая сумма чисел равна [${total}]`
+    : "Вы не ввели не одного числа";
+
+let total = arrTotal(getNumber());
+console.log(printSum(total));
