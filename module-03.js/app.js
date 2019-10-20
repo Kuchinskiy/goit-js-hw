@@ -151,3 +151,102 @@ const scientist = [
 // 10) Видалити з масива всіх вчених імя яких починається на A
 const deleteA = scientist.filter(elem => elem.first[0] !== 'A');
 // console.log(deleteA);
+
+// -------------------------------------------------------------------------------
+
+// Доступ к свойствам
+
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// console.log(hotel);
+
+// ============================================
+
+// Создание нового ключа в объекте
+
+// hotel.address = '1, Beach ave.';
+// hotel['manager'] = 'Chuck Norris';
+
+// console.log(hotel);
+
+// =============================================
+
+// Изменение  значения у свойства
+
+// hotel.manager = 'Motley Cry';
+
+// console.log(hotel);
+
+// ==============================================
+
+// Удаление свойств
+
+// delete hotel.address;
+
+// console.log(hotel);
+
+// ===============================================
+
+// Обращение к несуществующему свойству(вернет)
+
+// console.log(hotel.pool); // undefined
+
+// ===============================================
+
+// Короткие свойства
+
+// let name = 'Bamble Bee';
+// let stars = 7;
+
+// const hotelNewStars = {
+//   name,
+//   stars,
+//   capacity: 100,
+// };
+
+// console.log(hotelNewStars);
+
+// ==================================================
+
+// Вычисляемые свойства
+
+// const key = 'person';
+// const getKey = () => {
+//   return 'age';
+// };
+
+// const object = {
+//   [key]: 'Mango',
+//   [getKey()]: 2,
+// };
+
+// console.log(object);
+
+// ====================================================
+
+// Доступ к объекту через 'this',
+// с использованием метода объекта function():
+
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+//   showName() {
+//     console.log(this.name);
+//   },
+//   changeCapacity(value) {
+//     this.capacity = value;
+//   },
+// };
+
+// hotel.showName(); // Resort Hotel
+
+// hotel.changeCapacity(200);
+// console.log(hotel.capacity); // 200
+
+
+
