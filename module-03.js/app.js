@@ -248,5 +248,5 @@ const deleteA = scientist.filter(elem => elem.first[0] !== 'A');
 // hotel.changeCapacity(200);
 // console.log(hotel.capacity); // 200
 
-
+// -----------------------------------------------------------
 

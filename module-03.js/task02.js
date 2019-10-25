@@ -6,12 +6,14 @@
 */
 
 const countProps = (obj) => {
-    let counter = 0;
-    for (var key in obj) {
-      counter++;
+    let total = 0;
+    for (const key in obj) {
+      console.log(key);
+      total += 1;
     }
-    return `Всего свойств: ${counter}`;
+    return `Всего свойств: ${total}`;
 };
+
 
 // Вызовы функции для проверки:
 
