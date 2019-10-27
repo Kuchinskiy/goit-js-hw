@@ -250,3 +250,17 @@ const deleteA = scientist.filter(elem => elem.first[0] !== 'A');
 
 // -----------------------------------------------------------
 
+
+
+
+// -------------------------------------------------------------------------------
+
+// fetch('https://api.themoviedb.org/3/movie/popular?api_key=76ed63f80dba3e42bfe198c0806fa9ba&language=en-US&page=1')
+// .then(result => result.json())
+// .then(data => {
+//   const {results} = data;
+//   console.log('results :', results);
+// })
+
+// -----------------------------------------------------------------------------------
+
