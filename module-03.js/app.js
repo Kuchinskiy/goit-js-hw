@@ -273,13 +273,13 @@ const deleteA = scientist.filter(elem => elem.first[0] !== "A");
 
 // Получить значение 123 и вывести в консоль из объекта objMyCrazy:
 
-// const objMyCrazy = {
-//   name: "crazy frog",
-//   someArr: [7, 9, { purpose: "confusion", number: 123 }, 3.3],
-//   randomAnimal: "banana shark"
-// };
+const objMyCrazy = {
+  name: "crazy frog",
+  someArr: [7, 9, { purpose: "confusion", number: 123 }, 3.3],
+  randomAnimal: "banana shark"
+};
 
-// console.log("value :", objMyCrazy.someArr[2]["number"]);
+console.log("value :", objMyCrazy.someArr[2]["number"]);
 
 // -------------------------------------------------------------------------------
 
