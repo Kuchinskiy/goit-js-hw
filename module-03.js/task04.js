@@ -15,7 +15,7 @@ const countTotalSalary = (employees) => {
     total += employees[key];
   }
 
-  return total;
+  return `Total: ${total}`;
 };
 
 
