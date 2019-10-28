@@ -13,9 +13,10 @@ const products = [
   { name: "Захват", price: 1200, quantity: 2 }
 ];
 
-const calculateTotalPrice = (arr, productName) => {
-  for (const product of arr) {
-    if (product.name === productName) {
+
+const calculateTotalPrice = (products, productNameValue) => {
+  for (const product of products) {
+    if (product.name === productNameValue) {
       return product.price * product.quantity;
     }
   }
@@ -25,4 +26,8 @@ const calculateTotalPrice = (arr, productName) => {
 
 console.log(calculateTotalPrice(products, "Радар")); // 5200
 
+console.log(calculateTotalPrice(products, "Сканер")); // 8100
+
 console.log(calculateTotalPrice(products, "Дроид")); // 2800
+
+console.log(calculateTotalPrice(products, "Захват")); // 2400

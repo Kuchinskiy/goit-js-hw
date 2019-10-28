@@ -9,39 +9,39 @@
 
 // Вариант-1
 
-// const findBestEmployee = employees => {
-//   const entries = Object.entries(employees);
-//   let maxValue = entries[0];
+const findBestEmployee = employees => {
+  const entries = Object.entries(employees);
+  let maxValue = entries[0];
 
-//   for (let entry of entries) {
-//     if (entry[1] > maxValue[1]) {
-//       maxValue = entry;
-//     }
-//   }
-
-//   return maxValue;
-// };
-
-// Вариант-2
-
-const findBestEmployee = (employee) => {
-  let max = 0;
-  let name;
-
-  const keys = Object.keys(employee);
-
-  for (const key of keys) {
-    if (max < employee[key]) {
-      max = employee[key];
-      name = key;
+  for (let entry of entries) {
+    if (entry[1] > maxValue[1]) {
+      maxValue = entry;
     }
   }
 
-  return {
-    name,
-    numberOfTasks: max
-  };
+  return maxValue;
 };
+
+// Вариант-2
+
+// const findBestEmployee = (employee) => {
+//   let max = 0;
+//   let name;
+
+//   const keys = Object.keys(employee);
+
+//   for (const key of keys) {
+//     if (max < employee[key]) {
+//       max = employee[key];
+//       name = key;
+//     }
+//   }
+
+//   return {
+//     name,
+//     numberOfTasks: max
+//   };
+// };
 
 // Вызовы функции для проверки:
 

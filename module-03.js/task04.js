@@ -15,7 +15,7 @@ const countTotalSalary = (employees) => {
     total += employees[key];
   }
 
-  return `Total: ${total}`;
+  return `total: ${total}`;
 };
 
 
@@ -27,8 +27,9 @@ const countTotalSalary = (employees) => {
 //   for (const value of salaryValues) {
 //     sumSalary += value;
 //   }
-//   return sumSalary;
+//   return `Итого: ${sumSalary}`;
 // };
+
 
 // Вызовы функции для проверки:
 

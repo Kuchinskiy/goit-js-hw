@@ -14,12 +14,10 @@ const products = [
   { name: "Захват", price: 1200, quantity: 2 }
 ];
 
-const getAllPropValues = function(products, key) {
+const getAllPropValues = (products, key) => {
   const values = [];
 
   for (const product of products) {
-    // console.log(product[key]);
-
     if (key in product) {
       values.push(product[key]);
     }
