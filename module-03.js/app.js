@@ -273,13 +273,14 @@ const deleteA = scientist.filter(elem => elem.first[0] !== "A");
 
 // Получить значение 123 и вывести в консоль из объекта objMyCrazy:
 
-const objMyCrazy = {
-  name: "crazy frog",
-  someArr: [7, 9, { purpose: "confusion", number: 123 }, 3.3],
-  randomAnimal: "banana shark"
-};
+// const objMyCrazy = {
+//   name: "crazy frog",
+//   someArr: [7, 9, { purpose: "confusion", number: 123 }, 3.3],
+//   randomAnimal: "banana shark"
+// };
 
-console.log("value :", objMyCrazy.someArr[2]["number"]);
+// console.log("value :", objMyCrazy.someArr[2].number); // .
+// console.log("value :", objMyCrazy.someArr[2]['number']); // ['...']
 
 // -------------------------------------------------------------------------------
 
@@ -291,4 +292,27 @@ console.log("value :", objMyCrazy.someArr[2]["number"]);
 // })
 
 // -----------------------------------------------------------------------------------
+
+// const cat = {};
+// cat.legs = 3;
+// cat['name'] = 'Harmony';
+// cat.color = 'gray';
+
+// console.log(cat);
+
+// const keys = Object.keys(cat);
+// console.log(keys);
+
+
+const friends = [
+  {name: 'Anna', age: 11, magicNumbers: [33, 54, 786, 93]},
+  {name: 'Dave', age: 17, magicNumbers: [134, 147, 70, 91]},
+  {name: 'Kate', age: 15, magicNumbers: [6, 12, 398, 955]}
+];
+
+console.log(friends);
+
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
 

@@ -13,7 +13,7 @@ const products = [
   { name: "Захват", price: 1200, quantity: 2 }
 ];
 
-
+// Вариант-1
 const calculateTotalPrice = (products, productNameValue) => {
   for (const product of products) {
     if (product.name === productNameValue) {
@@ -21,6 +21,19 @@ const calculateTotalPrice = (products, productNameValue) => {
     }
   }
 };
+
+
+// Вариант-2(G.G)
+const calculateTotalPrice = (products, productNameValue) => {
+  let total = 0;
+  for (const product of products) {
+    if (product.name === productNameValue) {
+      total = product.price * product.quantity;
+    }
+  }
+  return total;
+};
+
 
 // Вызовы функции для проверки:
 
