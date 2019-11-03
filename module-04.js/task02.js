@@ -13,9 +13,7 @@ const inventory = {
   }
 };
 
-const invokeInventoryOperation = (itemName, action) => {
-  action(itemName);
-};
+const invokeInventoryOperation = (itemName, action) => action(itemName);
 
 
 // Вызовы функции для проверки:
