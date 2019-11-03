@@ -19,6 +19,8 @@ const account = {
   }
 };
 
+// Вызовы функции для проверки:
+
 account.changeDiscount(0.15);
 console.log(account.discount); // 0.15
 
@@ -27,4 +29,4 @@ console.log(orders); // ['order-1', 'order-2', 'order-3']
 
 account.addOrder(5000, "order-4");
 console.log(account.balance); // 19000
-console.log(orders); // ['order-1', 'order-2', 'order-3', 'order-4']
+console.table(orders); // ['order-1', 'order-2', 'order-3', 'order-4']
