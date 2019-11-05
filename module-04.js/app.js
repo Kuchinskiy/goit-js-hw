@@ -143,8 +143,8 @@
 
 // =========================================================================
 
-const b = 42;
-const a = b * 2;
+// const b = 42;
+// const a = b * 2;
 
 // console.log(a);
 
@@ -160,3 +160,110 @@ const calcB = (a, b = 42) => a * b;
 // console.log( age );
 
 // =====================================================================================
+
+const hotel = {
+  name: ["Resort Hotel", "Palmer Beach"],
+  showThis(itemName) {
+    this.name.push(itemName);
+  }
+};
+
+const fn = (itemName, callback) => callback(itemName);
+
+// Передаем копию метода showThis с контекстом привязанным к hotel
+fn("Sunlight Motel", hotel.showThis.bind(hotel)); // ["Resort Hotel", "Palmer Beach", "Sunlight Motel" ]
+// console.log(hotel.name);
+
+// ========================================================================================
+
+const medalForScore = score => {
+  if (score < 3) {
+    return "Бронзовая";
+  }
+  if (score < 7) {
+    return "Серебряная";
+  }
+  return "Золотая";
+};
+
+// console.log(medalForScore(1));
+
+// ==========================================================================================
+
+// Вариант-1
+const add = function(a, b) {
+  return a + b;
+};
+
+const multiply = function(a, b) {
+  return a * b;
+};
+// console.log(add(multiply(36325, 9824), 777));  //356857577
+
+// Вариант-2
+const total = (a, b, c) => a + b * c;
+// console.log(total(777, 36325, 9824));  //356857577
+
+// Вариант-3
+const addMultiplyNum = function(a, b, c) {
+  const sum = a + b * c;
+
+  return sum;
+};
+
+const result = addMultiplyNum(777, 36325, 9824);
+// console.log(result);  //356857577
+
+// =============================================================================
+
+/*
+ * Напишите функцию которая принимает два массива в качестве аргументов (arr1, arr2).
+ * Она должна возвращать 'true' если масивы одинаковые
+ * (одни и те же элементы в том же одном порядке)
+ * или 'false' если массивы различаются.
+ * 
+ * P.S -->> (способ-1) используйте цикл for чтобы перебрать все значения из первого массива
+ * и проверить совпадают ли они со значениями во втором массиве.
+ * -->> (способ-2) можно опустить использование цикла for, выйдя сразу из функции,если
+ * длина массивов разная используя ветвления.
+ */
+
+
+// Вариант-2
+const arrSame = function (arr, array) {
+  if (arr.length !== array.length) {
+    return false;
+  } else (arr.length === array.length)
+    return true;
+};
+
+// console.log(arrSame([1, 2, 3], [4, 5, 6, 7])); // false
+
+// console.log(arrSame([1, 2, 3], [1, 2, 3])); // true
+
+// console.log(arrSame([1, 2, 3], [1, 2, 3, 4])); // false
+
+
+// Вариант-1
+const areArraysSame = function (arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+// console.log(areArraysSame([1, 2, 3], [4, 5, 6]));
+// false
+
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3]));
+// true
+
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4]));
+// false
