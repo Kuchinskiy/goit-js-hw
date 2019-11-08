@@ -221,7 +221,7 @@ const result = addMultiplyNum(777, 36325, 9824);
  * Она должна возвращать 'true' если масивы одинаковые
  * (одни и те же элементы в том же одном порядке)
  * или 'false' если массивы различаются.
- * 
+ *
  * P.S -->> (способ-1) используйте цикл for чтобы перебрать все значения из первого массива
  * и проверить совпадают ли они со значениями во втором массиве.
  * -->> (способ-2) можно опустить использование цикла for, выйдя сразу из функции,если
@@ -229,23 +229,8 @@ const result = addMultiplyNum(777, 36325, 9824);
  */
 
 
-// Вариант-2
-const arrSame = function (arr, array) {
-  if (arr.length !== array.length) {
-    return false;
-  } else (arr.length === array.length)
-    return true;
-};
-
-// console.log(arrSame([1, 2, 3], [4, 5, 6, 7])); // false
-
-// console.log(arrSame([1, 2, 3], [1, 2, 3])); // true
-
-// console.log(arrSame([1, 2, 3], [1, 2, 3, 4])); // false
-
-
 // Вариант-1
-const areArraysSame = function (arr1, arr2) {
+const areArraysSame = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -267,3 +252,21 @@ const areArraysSame = function (arr1, arr2) {
 
 // console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4]));
 // false
+
+
+// Вариант-2
+const sameArray = function(arr, array) {
+  if (arr.length !== array.length) {
+    return false;
+  } else arr.length === array.length;
+  return true;
+};
+
+// console.log(sameArray([1, 2, 3], [4, 5, 6, 7])); // false
+
+// console.log(sameArray([1, 2, 3], [1, 2, 3])); // true
+
+// console.log(sameArray([1, 2, 3], [1, 2, 3, 4])); // false
+
+// =====================================================================================
+
