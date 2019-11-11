@@ -32,6 +32,10 @@
 
 // =====================================================================================
 
+/*
+ * Извлечь значение '123':
+ */
+
 // const myCrazyObject = {
 //     "name": "A ridiculous object",
 //     "some array": [7, 9, { purpose: "confusion", number: 123 }, 3.3], "random animal": "Banana Shark"
@@ -39,7 +43,9 @@
 
 // console.log(myCrazyObject["some array"][2].number);
 
-// Объединить в один массив (массивы в масиве):
+/*
+ * Объединить в один массив (массивы в масиве):
+ */
 
 // const arr = [[1,5,6], [88,98,4]];
 // const clone = [];
@@ -60,7 +66,7 @@
 //     wheels: 4
 // };
 
-// // console.log(car);
+// console.log(car);
 
 // const bike = {
 //     doors: 5,
@@ -77,7 +83,7 @@
 
 // console.log(res);
 
-// PRACTICE(todo)
+//! PRACTICE(todo) !
 
 // const refs = {
 //     form: document.querySelector('.form'),
@@ -105,8 +111,8 @@
 //         };
 //         this.list.push(addedNewTask);
 //         console.log(addedNewTask);
-//         // console.log(task);
-//         // console.log(description);
+// console.log(task);
+// console.log(description);
 //         refs.form.reset();
 //         return addedNewTask;
 //     }
@@ -121,10 +127,10 @@
 //     console.log(event.target.elements);
 //     const [task, description] = event.currentTarget.elements;
 //     const taskValue = task.value;
-//     // console.log(task);
-//     // console.log(description);
+// console.log(task);
+// console.log(description);
 //     const todoList = todo.addTask(taskValue, description.value);
-//     // console.log(todoList);
+// console.log(todoList);
 
 //     const newList = `<ul class="list">
 //     <h2 class="task">${todoList.task}
@@ -137,7 +143,7 @@
 
 // refs.form.addEventListener('submit', handleSubmit);
 
-// // создаем fn которая создает elements :
+// создаем fn которая создает elements :
 
 // const drawHtml = () => {
 //     tasks.map(task =>`<ul class="list">
@@ -246,7 +252,7 @@
 //   fullview: document.querySelector(".fullview")
 // };
 
-// // console.log('refs.fullview');
+// console.log('refs.fullview');
 
 // refs.fullview.insertAdjacentHTML(
 //   "afterbegin",
@@ -273,4 +279,117 @@
 // refs.preview.addEventListener("click", imagePreview);
 // ============================================================================================
 
+// ! Создаем палагин "счетчик":
+
+// const Counter = function({ initValue = 0, step = 1 }) {
+//   this.initValue = initValue;
+//   this.step = step;
+// };
+
+// const counterA = new Counter({ initValue: 10, step: 5 });
+
+// const counterB = new Counter({ initValue: 100, step: 50 });
+
+// console.log(counterA, counterB);
+
+// =========================================================================
+
+/*
+ * Калькулятор.
+ * Создайте объект calculator{...} с тремя методами:
+ * -->> read() (читать) запрашивает два значения и сохраняет их как свойства объекта;
+ * -->> sum() (суммировать) возвращает сумму сохраненных значений;
+ * -->> mul() (умножить) перемножает сохраненные значения и возвращает результат;
+ */
+
+const calc = {
+  firstValue: "",
+  secondValue: "",
+  read() {
+    this.firstValue = Number(prompt("Введите первое число"));
+    this.secondValue = Number(prompt("Введите второе число"));
+  },
+
+  sum() {
+    return this.firstValue + this.secondValue;
+  },
+
+  mul() {
+    return this.firstValue * this.secondValue;
+  }
+};
+
+// calc.read();
+// console.log(calc.sum());
+// console.log(calc.mul());
+
+// ==============================================================================
+
+// PRACTICE with Alex l
+
+// function myAlert(a, c, d) {
+//   let b = `<p class='${c}'>${a}</p>`;
+//   document.querySelector(d).innerHTML = b;
+// }
+
+// myAlert("Hi", "red", ".test");
+// myAlert("Hello", "orange", ".test2");
+
+
+// !Выносим в отдельный файл с названием(Alert)
+// !Обязательно делаем коментарии для других разработчиков
+
+// class Alert {
+//   constructor(a, c, d) {
+//     this.message = a;
+//     this.cssClass = c;
+//     this.out = d;
+//   }
+//   showAlert() {
+//     document.querySelector(
+//       this.out
+//     ).innerHTML = `<p class='${this.cssClass}'>${this.message}</p>`;
+//   }
+//   outAlert() {
+//     alert(this.message);
+//   }
+// }
+
+// let mess = new Alert("My message", "red", ".test");
+// console.log(mess);
+// mess.showAlert();
+
+
+// !AlertIcon выносим в другой файл, делаем коммент
+
+// class AlertIcon extends Alert {
+//   constructor(a, c, d, icon) {
+//     super(a, c, d);
+//     this.icon = icon;
+//   }
+//   showIconAlert() {
+//     document.querySelector(this.out).innerHTML = `<p class='${this.cssClass}'>
+//     <i class="material-icons">${this.icon}</i>${this.message}</p>`;
+//   }
+//   outAlert() {
+//     alert('Second ' + this.message);
+//   }
+// }
+
+// let message = new AlertIcon("My message", "red", ".test", "account_balance");
+// message.showIconAlert();
+// message.outAlert();
+
+// ===========================================================================================
+
+const fn = function () {
+  console.dir(fn);
+};
+
+fn();
+
+const fnG = function () {
+  
+};
+console.dir(fnG);
 

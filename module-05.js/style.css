@@ -97,3 +97,28 @@ input {
 li {
     list-style: none;
 } */
+
+/* ============================================================================= */
+
+/* PRACTICE with Alex L*/
+
+.orange {
+    width: 250px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    background: orange;
+    border: 2px solid yellowgreen;
+}
+
+.red {
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    background: red;
+    border: 2px solid greenyellow;
+}
