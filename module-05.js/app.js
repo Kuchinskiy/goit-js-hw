@@ -382,14 +382,103 @@ const calc = {
 
 // ===========================================================================================
 
-const fn = function () {
-  console.dir(fn);
+const age = /* random number */ 42; 
+// console.log(age);
+
+
+
+// const TAX_RATE = 0.20;
+
+// function calculateFinalPurchaseAmount(amt) {
+  // вычисляем новую сумму с налогом
+// amt = amt + (amt * TAX_RATE);
+
+  // возвращаем новую сумму
+// return amt;
+// }
+
+// var amount = 99.99;
+
+// amount = calculateFinalPurchaseAmount( amount );
+
+// console.log( amount.toFixed( 2 ) );
+
+// =======================================================================================
+
+// const PRICE_MOBILE = 70;
+// const COST_ACCESSORY = 30;
+// const CARD_BALANCE = 1000;
+// const LIMIT_SPEND = 700;
+// const TAX_RATE = 0.20;
+
+// ======================================================================================================
+
+// const film = {
+//     original_title: "Joker",
+//     title: "Joker",
+//     vote_average: 8.4,
+//     overview: "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+//     release_date: "2019-10-02"
+// };
+
+
+// class Film {
+//   constructor ({ title, vote_average, overview, release_date }) {
+//     this.title = title;
+//     this.vote_average = vote_average;
+//     this.overview = overview;
+//     this.release_date = release_date;
+//   }
+//   showRating () {
+//     console.log(this.vote_average);
+//   }
+
+//   showTitle () {
+//     console.log(this.title);
+//   }
+
+//   showOweriew () {
+//     console.log(this.overview);
+//   }
+// };
+
+// const newFilm = new Film (film);
+
+// console.log(newFilm);
+
+// newFilm.showRating();
+// newFilm.showTitle();
+// newFilm.showOweriew();
+
+// class Sitcom extends Film {
+//   constructor (film) {
+//     super (film);
+//     this.jenre = 'Sitcom';
+//   }
+// };
+
+// const newSitcom = new Sitcom(film);
+// console.log(newSitcom);
+
+// ==========================================================================================
+
+const Account = function (login, email) {
+  this.login = login;
+  this.email = email;
 };
 
-fn();
 
-const fnG = function () {
-  
+Account.prototype.getInfo = function getInfo () {
+  console.log(`login: ${this.login}, email: ${this.email}`);
 };
-console.dir(fnG);
 
+console.log(Account.prototype.getInfo); // function
+
+const mango = new Account('Mangozedog', 'mango@dog.woof');
+mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+
+const poly = new Account('Poly', 'poly@mail.com');
+poly.getInfo(); // Login: Poly, Email: poly@mail.com
+
+const ajax = new Account('Asdqwerty', 'ajax@SpeechGrammarList.com');
+ajax.getInfo();

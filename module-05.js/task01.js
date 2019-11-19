@@ -6,13 +6,13 @@
 значения полей login и email объекта который его вызвал.
 */
 
-const Account = function Account(login, email) {
+const Account = function (login, email) {
   this.login = login;
   this.email = email;
 };
 
 Account.prototype.getInfo = function getInfo() {
-  console.log(`login : ${this.login} | email : ${this.email}`);
+  console.log(`login : ${this.login}, email : ${this.email}`);
 };
 
 console.log(Account.prototype.getInfo); // function
@@ -22,3 +22,6 @@ mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
 
 const poly = new Account("Poly", "poly@mail.com");
 poly.getInfo(); // Login: Poly, Email: poly@mail.com
+
+const ajax = new Account('Asdqwerty', 'ajax@SpeechGrammarList.com');
+ajax.getInfo(); // Login: Asdqwerty, Email: ajax@SpeechGrammarList.com
