@@ -335,7 +335,6 @@ const calc = {
 // myAlert("Hi", "red", ".test");
 // myAlert("Hello", "orange", ".test2");
 
-
 // !Выносим в отдельный файл с названием(Alert)
 // !Обязательно делаем коментарии для других разработчиков
 
@@ -359,7 +358,6 @@ const calc = {
 // console.log(mess);
 // mess.showAlert();
 
-
 // !AlertIcon выносим в другой файл, делаем коммент
 
 // class AlertIcon extends Alert {
@@ -382,18 +380,16 @@ const calc = {
 
 // ===========================================================================================
 
-const age = /* random number */ 42; 
+const age = /* random number */ 42;
 // console.log(age);
-
-
 
 // const TAX_RATE = 0.20;
 
 // function calculateFinalPurchaseAmount(amt) {
-  // вычисляем новую сумму с налогом
+// вычисляем новую сумму с налогом
 // amt = amt + (amt * TAX_RATE);
 
-  // возвращаем новую сумму
+// возвращаем новую сумму
 // return amt;
 // }
 
@@ -403,13 +399,45 @@ const age = /* random number */ 42;
 
 // console.log( amount.toFixed( 2 ) );
 
-// =======================================================================================
+// ===================================================================================================
 
-// const PRICE_MOBILE = 70;
-// const COST_ACCESSORY = 30;
-// const CARD_BALANCE = 1000;
-// const LIMIT_SPEND = 700;
-// const TAX_RATE = 0.20;
+/*
+ * Напишите программу для вычисления общей стоимости покупки телефона.
+ */
+
+// const PRICE_MOBILE = 30.47;
+// const COST_ACCESSORY = 9.78;
+
+// const TAX_RATE = 0.08;
+// const LIMIT_SPEND = 220;
+
+// const card_balance = 320;
+// let cost = 0;
+
+// function calculatorTax (cost) {
+//   return cost * TAX_RATE;
+// };
+
+// function formatCost (cost) {
+//   return '$ ' + cost.toFixed(2);
+// };
+
+// продолжаем покупать телефоны пока у нас остаются деньги
+// while (cost < card_balance) {
+// покупаем новый телефон!
+//   cost += PRICE_MOBILE;
+// можем ли мы позволить себе аксессуар для телефона?
+//   if (cost < LIMIT_SPEND) {
+//     cost += COST_ACCESSORY;
+
+//   } else if (cost > card_balance) {
+//     console.log('Вы не можете позволить себе эту покупку :(');
+//   }
+// };
+// не забудьте заплатить налог
+// cost += calculatorTax(cost);
+
+// console.log('Стоимость вашей покупки : ' + formatCost(cost));
 
 // ======================================================================================================
 
@@ -420,7 +448,6 @@ const age = /* random number */ 42;
 //     overview: "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
 //     release_date: "2019-10-02"
 // };
-
 
 // class Film {
 //   constructor ({ title, vote_average, overview, release_date }) {
@@ -462,23 +489,5 @@ const age = /* random number */ 42;
 
 // ==========================================================================================
 
-const Account = function (login, email) {
-  this.login = login;
-  this.email = email;
-};
 
 
-Account.prototype.getInfo = function getInfo () {
-  console.log(`login: ${this.login}, email: ${this.email}`);
-};
-
-console.log(Account.prototype.getInfo); // function
-
-const mango = new Account('Mangozedog', 'mango@dog.woof');
-mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
-
-const poly = new Account('Poly', 'poly@mail.com');
-poly.getInfo(); // Login: Poly, Email: poly@mail.com
-
-const ajax = new Account('Asdqwerty', 'ajax@SpeechGrammarList.com');
-ajax.getInfo();

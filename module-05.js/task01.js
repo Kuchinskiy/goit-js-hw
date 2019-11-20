@@ -1,9 +1,9 @@
 "use strict";
 
 /*
-Напиши функцию-конструктор Account, которая создает объект со свойствами login и email. 
-В prototype функции-конструктора добавь метод getInfo(), который выводит в консоль 
-значения полей login и email объекта который его вызвал.
+* Напиши функцию-конструктор Account, которая создает объект со свойствами login и email. 
+* В prototype функции-конструктора добавь метод getInfo(), который выводит в консоль 
+* значения полей login и email объекта который его вызвал.
 */
 
 const Account = function (login, email) {
@@ -14,6 +14,21 @@ const Account = function (login, email) {
 Account.prototype.getInfo = function getInfo() {
   console.log(`login : ${this.login}, email : ${this.email}`);
 };
+
+
+// !Используем 'class' для задания конструктора вместе с прототипом
+// Под капотом 'class' - это функция-конструктор с прототипом
+
+// class Account {
+//   constructor(login, email) {
+//     this.login = login;
+//     this.email = email;
+//   }
+
+//   getInfo() {
+//     console.log(`login: ${this.login}, email: ${this.email}`);
+//   }
+// };
 
 console.log(Account.prototype.getInfo); // function
 
