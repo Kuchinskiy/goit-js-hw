@@ -11,7 +11,7 @@ const Account = function (login, email) {
   this.email = email;
 };
 
-Account.prototype.getInfo = function getInfo() {
+Account.prototype.getInfo = function () {
   console.log(`login : ${this.login}, email : ${this.email}`);
 };
 
