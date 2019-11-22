@@ -302,22 +302,22 @@
  * -->> mul() (умножить) перемножает сохраненные значения и возвращает результат;
  */
 
-const calc = {
-  firstValue: "",
-  secondValue: "",
-  read() {
-    this.firstValue = Number(prompt("Введите первое число"));
-    this.secondValue = Number(prompt("Введите второе число"));
-  },
+// const calc = {
+//   firstValue: "",
+//   secondValue: "",
+//   read() {
+//     this.firstValue = Number(prompt("Введите первое число"));
+//     this.secondValue = Number(prompt("Введите второе число"));
+//   },
 
-  sum() {
-    return this.firstValue + this.secondValue;
-  },
+//   sum() {
+//     return this.firstValue + this.secondValue;
+//   },
 
-  mul() {
-    return this.firstValue * this.secondValue;
-  }
-};
+//   mul() {
+//     return this.firstValue * this.secondValue;
+//   }
+// };
 
 // calc.read();
 // console.log(calc.sum());
@@ -488,4 +488,24 @@ const age = /* random number */ 42;
 // console.log(newSitcom);
 
 // ==========================================================================================
+
+// Императивный подход
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] > 3) {
+//     filteredNumbers.push(numbers[i]);
+//   }
+// }
+
+// console.log(filteredNumbers); // [4, 5]
+
+
+// Декларативный подход
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = numbers.filter(value => value > 3);
+
+// console.log(filteredNumbers); // [4, 5]
+
 
