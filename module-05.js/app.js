@@ -486,7 +486,3 @@ const age = /* random number */ 42;
 
 // const newSitcom = new Sitcom(film);
 // console.log(newSitcom);
-
-// ==========================================================================================
-
-
