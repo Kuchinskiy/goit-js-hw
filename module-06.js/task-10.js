@@ -19,6 +19,25 @@ const getSortedUniqueSkills = users => {
   return arr.sort();
 };
 
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum',
 //  'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+
+// Вариант - 2
+
+// const getSortedUniqueSkills = users => {
+//   return users
+//     .reduce((allSkills, { skills }) => {
+//       skills.forEach(element => {
+//         if (allSkills.includes(element)) return;
+
+//         allSkills.push(element);
+//       });
+
+//       return allSkills;
+//     }, [])
+//     .sort();
+// };
+
+// console.log(getSortedUniqueSkills(users));

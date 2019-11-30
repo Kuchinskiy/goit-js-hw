@@ -222,7 +222,7 @@ const users = [
   }
 ];
 
-//  * Попробуем сперва сделать через цепочку методов массива: 
+//  * Попробуем сперва сделать через цепочку методов массива:
 
 const fiftySomethingsLongFullNames = users
   // Сначала мы фильтруем только тех пользователей, которым за двадцать:
@@ -273,40 +273,43 @@ const thirtySomethingsLongFullNames = users.reduce(
 // * с полным именем каждого человека в новой строке.
 
 /*  Naive implementation, используем метод (---* .forEach--)  */
-let everyonesName = '';
+let everyonesName = "";
 
 users.forEach(user => {
-everyonesName += `${user.firstName} ${user.lastName}\n`;});
+  everyonesName += `${user.firstName} ${user.lastName}\n`;
+});
 
 // console.log(everyonesName);
 
 /*  Better implementation,  используем метод (---* .map--)*/
-const _everyonesName = users.map(
-user => `${user.firstName} ${user.lastName}\n`).join('');
+const _everyonesName = users
+  .map(user => `${user.firstName} ${user.lastName}\n`)
+  .join("");
 
 // console.log(_everyonesName);
 
 /*  Best implementation, используем метод (---* .reduce--)*/
 const $everyonesName = users.reduce(
-(acc, user) => `${acc}${user.firstName} ${user.lastName}\n`,'');
+  (acc, user) => `${acc}${user.firstName} ${user.lastName}\n`,
+  ""
+);
 
 // console.log($everyonesName);
 
 // ================================================================
 
 const fruits = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'cherries', quantity: 5 },
-  { name: 'grapes', quantity: 7 },
-  { name: 'bananas', quantity: 9 },
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+  { name: "grapes", quantity: 7 },
+  { name: "bananas", quantity: 9 }
 ];
 
 // const thisShitIsBananas = fruits.reduce((acc, fruit) => {
 //     return acc;
 // });
 // ! Object { name: "apples", quantity: 2 } -->> вернулся первый элемент из массива;
-
 
 // const thisShitIsBananas = fruits.reduce((acc, fruit) => {
 //   if (fruit.name === 'bananas') return fruit;
@@ -320,23 +323,66 @@ const fruits = [
 // * Создадим с помощью метода (---* reduce--) многоразовую функцию(без 'hardcoding'),
 // * по факту анологичную до метода (---*find--):
 
-//  arrayFind принимает массив и возвращает функцию 
-//  возвращаемая функция принимает функцию поиска 
-const arrayFind = arr => fn => arr.reduce((acc, item, index) => {
-  //  Передаем функцию поиска item и индекс 
-  if (fn(item, index)) return item;
-  return acc;
-});
+//  arrayFind принимает массив и возвращает функцию
+//  возвращаемая функция принимает функцию поиска
+const arrayFind = arr => fn =>
+  arr.reduce((acc, item, index) => {
+    //  Передаем функцию поиска item и индекс
+    if (fn(item, index)) return item;
+    return acc;
+  });
 //  Создаем функцию поиска только для наших фруктов
 const fruitFinder = arrayFind(fruits);
-//  Теперь мы можем передать простую функцию поиска в fruitFinder 
-//  Это на то, что `fn` ссылается выше: 
-const thisShitIsBananas = fruitFinder(fruit => fruit.name === 'bananas');
+//  Теперь мы можем передать простую функцию поиска в fruitFinder
+//  Это на то, что `fn` ссылается выше:
+const thisShitIsBananas = fruitFinder(fruit => fruit.name === "bananas");
 
-// Это грубая версия Array.find- фактическая версия вернет 'первый элемент в массиве', 
-// который соответствует, тогда как то , что мы только что записали там, 
-// фактически вернет 'последний элемент в массиве', 
+// Это грубая версия Array.find- фактическая версия вернет 'первый элемент в массиве',
+// который соответствует, тогда как то , что мы только что записали там,
+// фактически вернет 'последний элемент в массиве',
 // который соответствует;
 // (так в нашем случае если их было больше одного 'bananas', -->>> возвращается последний).
 
 // console.log(thisShitIsBananas);
+
+// * Practice 30.11.19 -------------------------------------------------------------------------------
+
+const _users = [
+  {
+    name: "John",
+    age: 15,
+    salary: 3000
+  },
+  {
+    name: "Tom",
+    age: 25,
+    salary: 2000
+  },
+  {
+    name: "Ann",
+    age: 35,
+    salary: 2500
+  },
+  {
+    name: "Alex",
+    age: 28,
+    salary: 6000
+  }
+];
+
+const getUserWithMaxSalary = (_users) => {
+  return _users.reduce (( userWithMaxSalary, user) => {
+    if (userWithMaxSalary.salary < user.salary) {
+      return user;
+    }
+    return userWithMaxSalary;
+  })
+};
+
+console.log(getUserWithMaxSalary(_users));
+
+
+// const sortByAge = users => [...users].sort((a, b) => a.age - b.age);
+// console.log(sortByAge(users));
+
+const 
