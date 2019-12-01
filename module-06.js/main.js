@@ -345,7 +345,6 @@ const thisShitIsBananas = fruitFinder(fruit => fruit.name === "bananas");
 
 // console.log(thisShitIsBananas);
 
-
 const _users = [
   {
     name: "John",
@@ -370,22 +369,68 @@ const _users = [
 ];
 
 /*
-* Вывести пользователя с его данными у которого сумма зарплаты самая максимальная.
-*/
+ * Вывести пользователя с его данными у которого сумма зарплаты самая максимальная.
+ */
 
-const getUserWithMaxSalary = (_users) => {
-  return _users.reduce (( userWithMaxSalary, user) => {
+const getUserWithMaxSalary = _users => {
+  return _users.reduce((userWithMaxSalary, user) => {
     if (userWithMaxSalary.salary < user.salary) {
       return user;
     }
     return userWithMaxSalary;
-  })
+  });
 };
 
 // console.log(getUserWithMaxSalary(_users));
 
 /*
-* Отсортировать возрастную категорию пользователей от меншого к большему значению (поле age)
-*/
+ * Отсортировать возрастную категорию пользователей от меншого к большему значению (поле age)
+ */
 const sortByAge = users => [...users].sort((a, b) => a.age - b.age);
 // console.log(sortByAge(users));
+
+/*
+ * Напишите функцию camelCase(str)б которая преобразует строку вида «my-short-string» в «myShortString»
+ */
+
+const camelCase = str => {
+  // разбивает 'my-long-word' на массив ['my', 'long', 'word']
+  return (
+    str
+      .split("-")
+      // Переводит в верхний регистр первые буквы всех элементом массива
+      // за исключением первого элемента
+      .map((word, idx) =>
+        idx === 0 ? word : word[0].toUpperCase() + word.slice(1)
+      )
+      .join("")
+  );
+};
+
+// console.log(camelCase("my-short-string")); // myShortString
+
+/*
+* Напишите две разных функции:
+
+* первая  filterRange(arr, a, b) принимает три аргумента 
+* -->> массив arr, ищет в нём элементы между 'a' и 'b' возвращает  массив
+* этих элементов и сортирует в порядке возростания;
+
+* вторая _filterRange(arr, a) принимает два аргумента
+* -->> массив arr, ищет в нем элементы которые больше чем (или равны) 'a'
+* и сортирует в порядке убывания;
+*/
+
+const arr = [5, 131, 18, 141, 23, 12, 7, 125, 45];
+
+const filterRange = (arr, a, b) =>
+  arr.filter(num => a <= num && num <= b).sort((a, b) => a - b);
+
+console.log(filterRange(arr, 10, 45));
+
+
+const _filterRange = (arr, a) =>
+  arr.filter(num => num >= a).sort((a, b) => b - a);
+
+console.log(_filterRange(arr, 125));
+
