@@ -345,7 +345,6 @@ const thisShitIsBananas = fruitFinder(fruit => fruit.name === "bananas");
 
 // console.log(thisShitIsBananas);
 
-// * Practice 30.11.19 -------------------------------------------------------------------------------
 
 const _users = [
   {
@@ -370,6 +369,10 @@ const _users = [
   }
 ];
 
+/*
+* Вывести пользователя с его данными у которого сумма зарплаты самая максимальная.
+*/
+
 const getUserWithMaxSalary = (_users) => {
   return _users.reduce (( userWithMaxSalary, user) => {
     if (userWithMaxSalary.salary < user.salary) {
@@ -379,10 +382,10 @@ const getUserWithMaxSalary = (_users) => {
   })
 };
 
-console.log(getUserWithMaxSalary(_users));
+// console.log(getUserWithMaxSalary(_users));
 
-
-// const sortByAge = users => [...users].sort((a, b) => a.age - b.age);
+/*
+* Отсортировать возрастную категорию пользователей от меншого к большему значению (поле age)
+*/
+const sortByAge = users => [...users].sort((a, b) => a.age - b.age);
 // console.log(sortByAge(users));
-
-const 
