@@ -426,11 +426,55 @@ const arr = [5, 131, 18, 141, 23, 12, 7, 125, 45];
 const filterRange = (arr, a, b) =>
   arr.filter(num => a <= num && num <= b).sort((a, b) => a - b);
 
-console.log(filterRange(arr, 10, 45));
+// console.log(filterRange(arr, 10, 45));
 
 
 const _filterRange = (arr, a) =>
   arr.filter(num => num >= a).sort((a, b) => b - a);
 
-console.log(_filterRange(arr, 125));
+// console.log(_filterRange(arr, 125));
 
+
+/*
+* Отсортировать масисив элементов в порядке по убыванию без мутации оригинала.
+*/
+
+const array = [5, 2, 1, -10, 8];
+
+const arrSortInOrderDescending = (array) => [...array].sort((a, b) => b - a);
+// console.log(arrSortInOrderDescending(array));
+// console.log(array);
+
+
+/*
+* Отсортировать масисив элементов без мутации оригинала.
+*/
+
+const arrStringElem = ["HTML", "JavaScript", "CSS"];
+
+// Императивный код...
+// const sorted = [...arrStringElem];
+// sorted.sort();
+
+// console.log(sorted);
+// console.log(arrStringElem);
+
+
+// Декларативный код...
+const sortArrElem = () => [...arrStringElem].sort();
+
+// console.log(sortArrElem());
+// console.log(arrStringElem);
+
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+const sorted = copySorted(arrStringElem);
+
+// console.log(sorted);
+// console.log(arrStringElem);
+
+document.querySelector('selector');
+document.querySelectorAll('selector');
