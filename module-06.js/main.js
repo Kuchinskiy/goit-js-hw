@@ -428,27 +428,24 @@ const filterRange = (arr, a, b) =>
 
 // console.log(filterRange(arr, 10, 45));
 
-
 const _filterRange = (arr, a) =>
   arr.filter(num => num >= a).sort((a, b) => b - a);
 
 // console.log(_filterRange(arr, 125));
 
-
 /*
-* Отсортировать масисив элементов в порядке по убыванию без мутации оригинала.
-*/
+ * Отсортировать масисив элементов в порядке по убыванию без мутации оригинала.
+ */
 
 const array = [5, 2, 1, -10, 8];
 
-const arrSortInOrderDescending = (array) => [...array].sort((a, b) => b - a);
+const arrSortInOrderDescending = array => [...array].sort((a, b) => b - a);
 // console.log(arrSortInOrderDescending(array));
 // console.log(array);
 
-
 /*
-* Отсортировать масисив элементов без мутации оригинала.
-*/
+ * Отсортировать масисив элементов без мутации оригинала.
+ */
 
 const arrStringElem = ["HTML", "JavaScript", "CSS"];
 
@@ -459,13 +456,11 @@ const arrStringElem = ["HTML", "JavaScript", "CSS"];
 // console.log(sorted);
 // console.log(arrStringElem);
 
-
 // Декларативный код...
 const sortArrElem = () => [...arrStringElem].sort();
 
 // console.log(sortArrElem());
 // console.log(arrStringElem);
-
 
 function copySorted(arr) {
   return arr.slice().sort();
@@ -476,3 +471,26 @@ const sorted = copySorted(arrStringElem);
 // console.log(sorted);
 // console.log(arrStringElem);
 
+
+/*
+* Получить массив всех значений (поля 'num') без мутации оригинала при
+* этом не должно быть повторяющихся элементов(только уникальные).
+*/
+
+const numbers = [
+  { num: ["1", "2", "3"] },
+  { num: ["3", "2", "1"] },
+  { num: ["4", "5", "6"] },
+  { num: ["5", "4", "6"] },
+  { num: ["7", "8", "9"] },
+  { num: ["10", "8", "9"] }
+];
+
+const getUniqueNumber = numbers => {
+  return numbers
+    .reduce((acc, { num }) => [...acc, ...num], [])
+    .filter((elem, idx, numbers) => numbers.indexOf(elem) === idx);
+};
+
+console.log(getUniqueNumber(numbers));
+console.log(numbers);

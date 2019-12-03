@@ -8,16 +8,13 @@ import users from "./users.js";
  */
 
 // Вариант-1
-const getSortedUniqueSkills = users => {
-  const arr = users
+const getSortedUniqueSkills = users =>
+  users
     .reduce((allSkills, { skills }) => [...allSkills, ...skills], [])
-    .filter((elem, index, skills) => skills.indexOf(elem) === index);
-
-  return arr.sort((a, b) => a.localeCompare(b, 'en'));
-};
+    .filter((elem, index, skills) => skills.indexOf(elem) === index)
+    .sort((a, b) => a.localeCompare(b, "en"));
 
 console.log(getSortedUniqueSkills(users));
-
 
 // Вариант-2
 // const getSortedUniqueSkills = users => {
@@ -28,9 +25,6 @@ console.log(getSortedUniqueSkills(users));
 // };
 
 // console.log(getSortedUniqueSkills(users));
-
-
-
 
 // Для синхронного JS для асинхронного не подходит,так как метод 'PUSH' мутирует оригинал
 
