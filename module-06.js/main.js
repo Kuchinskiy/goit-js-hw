@@ -476,5 +476,3 @@ const sorted = copySorted(arrStringElem);
 // console.log(sorted);
 // console.log(arrStringElem);
 
-document.querySelector('selector');
-document.querySelectorAll('selector');
