@@ -13,7 +13,7 @@ const getSortedUniqueSkills = users => {
     .reduce((allSkills, { skills }) => [...allSkills, ...skills], [])
     .filter((elem, index, skills) => skills.indexOf(elem) === index);
 
-  return arr.sort((a, b) => a - b);
+  return arr.sort((a, b) => a.localeCompare(b, 'en'));
 };
 
 console.log(getSortedUniqueSkills(users));
