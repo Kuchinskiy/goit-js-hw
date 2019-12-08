@@ -1,5 +1,20 @@
-.game {
+/* .game {
     width: 400px;
     height: 200px;
     border: solid 1px black;
-};
+}; */
+
+
+#pool {
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+
+  #persone {
+    background-color: yellow;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+  }
