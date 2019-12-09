@@ -1,10 +1,87 @@
-'use strict';
+"use strict";
 
+/*
+ * Метод elem.addEventListener()
+ */
+// const singleBtn = document.querySelector('#single');
+
+// Для обработчика события можно (и желательно)
+// использовать отдельную функцию, ссылку на которую
+// передаем вторым аргументом в addEventListener
+// const handleClick = () => alert('CLICK!');
+
+// singleBtn.addEventListener('click', handleClick);
+
+//========================================================
+// Можно вешать более одного обработчика на элемент,
+// даже на одно и тоже событие
+// const multiBtn = document.querySelector('#multiple');
+
+// const firstCallback = () => alert('First callback!');
+// const secondCallback = () => alert('Second callback!');
+// const thirdCallback = () => alert('Third callback!');
+
+// multiBtn.addEventListener('click', firstCallback);
+// multiBtn.addEventListener('click', secondCallback);
+// multiBtn.addEventListener('click', thirdCallback);
+
+/*
+ *  Метод elem.removeEventListener()
+ */
+// const addBtn = document.querySelector('button[data-action="add"]');
+// const removeBtn = document.querySelector('button[data-action="remove"]');
+// const btn = document.querySelector("#btn");
+
+// const handleClick = () => {
+//   alert("CLICK EVENT LISTENER ALERT!");
+// };
+
+// addBtn.addEventListener("click", () => {
+//   btn.addEventListener("click", handleClick);
+// });
+
+// removeBtn.addEventListener("click", () => {
+//   btn.removeEventListener("click", handleClick);
+// });
+
+/*
+* Объект события
+*/
+// const btn = document.querySelector("#btn");
+
+// event - это и есть обьект события который автоматически 
+// передается первым аргументом, мы можем называть его как угодно, 
+// хоть qwerty, но чаще всего он называется или e, evt или event
+
+// const handleClick = event => {
+//   console.log("event: ", event); //откройте консоль чтобы увидеть весь объект целиком
+
+//   console.log("event type: ", event.type); // event type:  click
+
+  // будет window, так как мы используем стрелочную функцию, 
+  // которая использует внешний контекст 
+  // Если использовать обычную функцию то this будет самим элементом 
+  // button и равен currentTarget
+//   console.log("this: ", this); 
+//   console.log("target: ", event.target); // <button id="btn">CLICK ME!</button>
+// };
+
+// btn.addEventListener("click", handleClick);
+
+
+/*
+ * Находим нам необходимый DOM-узел через метод 'elem.querySelector(selector)',
+ * вешаем на него слушателя(обработчик) 'element.addEventListener(event, handler[, phase])'
+ * для этого вызываем call-back функцию.
+ */
 // const btn = document.querySelector('.cool-btn');
 // btn.addEventListener('click', () => {
 //     console.log('clicked');
 // });
 
+
+
+// Допольнительна практика на занятии
 
 // const gameContainer = document.querySelector('.game');
 // const square = document.createElement('div');
@@ -19,7 +96,6 @@
 // square.style.background = 'purple';
 
 // gameContainer.appendChild(square);
-
 
 // const addMotionController = element => {
 //     document.addEventListener ('keydown', (evt) => {
@@ -47,24 +123,21 @@
 
 
 
-// ----*smallPracticeAnimation----
+//? ----*smallPracticeAnimation----?!
 
 // function myMove() {
-//     const elem = document.getElementById("persone");   
+//     const elem = document.getElementById("persone");
 //     let pos = 0;
-//     let id = setInterval(frame, 15);
+//     let id = setInterval(frame, 5);
 //     function frame() {
-//       if (pos === 270) {
+//       if (pos === 230) {
 //         clearInterval(id);
 //       } else {
-//         pos++; 
-//         elem.style.top = pos + 'px'; 
-//         elem.style.left = pos + 'px'; 
+//         pos++;
+//         elem.style.top = pos + 'px';
+//         elem.style.left = pos + 'px';
 //       }
 //     }
 //   }
 
-// setInterval(myMove, 3000);
-
-
-
+// setTimeout(myMove);
