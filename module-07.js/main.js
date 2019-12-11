@@ -45,12 +45,12 @@
 // });
 
 /*
-* Объект события
-*/
+ * Объект события
+ */
 // const btn = document.querySelector("#btn");
 
-// event - это и есть обьект события который автоматически 
-// передается первым аргументом, мы можем называть его как угодно, 
+// event - это и есть обьект события который автоматически
+// передается первым аргументом, мы можем называть его как угодно,
 // хоть qwerty, но чаще всего он называется или e, evt или event
 
 // const handleClick = event => {
@@ -58,16 +58,15 @@
 
 //   console.log("event type: ", event.type); // event type:  click
 
-  // будет window, так как мы используем стрелочную функцию, 
-  // которая использует внешний контекст 
-  // Если использовать обычную функцию то this будет самим элементом 
-  // button и равен currentTarget
-//   console.log("this: ", this); 
+// будет window, так как мы используем стрелочную функцию,
+// которая использует внешний контекст
+// Если использовать обычную функцию то this будет самим элементом
+// button и равен currentTarget
+//   console.log("this: ", this);
 //   console.log("target: ", event.target); // <button id="btn">CLICK ME!</button>
 // };
 
 // btn.addEventListener("click", handleClick);
-
 
 /*
  * Находим нам необходимый DOM-узел через метод 'elem.querySelector(selector)',
@@ -78,8 +77,6 @@
 // btn.addEventListener('click', () => {
 //     console.log('clicked');
 // });
-
-
 
 // Допольнительна практика на занятии
 
@@ -121,8 +118,6 @@
 
 // addMotionController(square);
 
-
-
 //? ----*smallPracticeAnimation----?!
 
 // function myMove() {
@@ -141,3 +136,55 @@
 //   }
 
 // setTimeout(myMove);
+
+
+/*
+* Делигирование событий на примере класса 'Menu'  и вешаем на него слушателя;
+*/ 
+// const menu = document.querySelector("#menu");
+// class Menu {
+//   constructor(elem) {
+//     elem.onclick = this.onClick.bind(this); // *
+//   }
+
+//   save() {
+//     alert("Save");
+//   }
+//   load() {
+//     alert("Loading");
+//   }
+//   search() {
+//     alert("Search");
+//   }
+//   onClick(evt) {
+//     let action = evt.target.dataset.action;
+//     if (action) {
+//       this[action]();
+//     }
+//   }
+// };
+
+// new Menu(menu);
+
+
+/*
+* Событие с делигированием 'button' 
+*/
+
+// const handler = (evt) => {
+//   const {target} = evt;
+//   const next = target.nextElementSibling || {};
+//   const prev = target.prevElementSibling || {};
+//   // const {nextElementSibling: next, prevElementSibling: prev} = target;  // деструктуризация
+//   const nextIsArea = next.getAttribute('id') === 'area';
+//   if (nextIsArea) {
+//     // console.log(next.hidden);
+//     next.hidden = !next.hidden;
+//   }
+//   const prevIsArea = prev.id === 'area';
+//   if (prevIsArea) {
+//     prev.hidden = !prev.hidden;
+//   }
+// }
+
+// document.addEventListener('click', handler);

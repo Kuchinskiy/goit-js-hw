@@ -14,3 +14,10 @@
 * Количество элементов: 4
 */
 
+
+const selectedById = document.querySelector('#categories');
+console.log(`${selectedById.children.length}`);
+
+[...selectedById.children].map(item => {console.log(`Категория: ${item.children[0].textContent}`);
+console.log(`Количество элементов: ${item.children[1].children.length}`);
+});
