@@ -33,7 +33,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('#gallery');
-// console.log('gallery:', gallery);
+
 
 const pictures = createAllGallery(images);
 gallery.insertAdjacentHTML("afterbegin", pictures);
