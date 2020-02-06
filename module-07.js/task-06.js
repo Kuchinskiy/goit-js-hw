@@ -21,6 +21,7 @@ inputById.addEventListener("blur", () => {
     inputById.classList.remove("invalid");
   } else {
     inputById.classList.add("invalid");
+    inputById.classList.remove("valid");
   }
 });
 
