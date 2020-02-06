@@ -23,7 +23,6 @@ document.querySelector(".btn-decrement").addEventListener("click", () => {
   valueById.textContent = counterValue;
 });
 
-
 // Вариант-2(через data-атрибуты)
 const valueByIdSpan = document.querySelector("#value");
 let counterValueClick = 0;
@@ -41,3 +40,28 @@ document
     counterValueClick -= 1;
     valueByIdSpan.textContent = counterValueClick;
   });
+
+// Вариант-4(G.G)
+const refs = {
+  counter: document.querySelector("#counter"),
+  value: document.querySelector("#value")
+};
+
+const actions = {
+  state: {
+    value: 0
+  },
+  decrement() {
+    this.state.value -= 1;
+  },
+  increment() {
+    this.state.value += 1;
+  }
+};
+
+const changeValue = ({ target }) => {
+  actions[target.dataset.action]();
+  refs.value.textContent = actions.state.value;
+};
+
+refs.counter.addEventListener("click", changeValue);

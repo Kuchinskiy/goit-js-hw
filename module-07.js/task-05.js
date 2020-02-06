@@ -7,20 +7,17 @@
  */
 
 // Вариант-1
-
 const nameInput = document.querySelector("#name-input");
 const currentString = document.querySelector("#name-output");
 
-nameInput.addEventListener("input", (e) => {
+nameInput.addEventListener("input", e => {
   currentString.textContent = e.currentTarget.value;
   if (currentString === "") {
     currentString === "незнакомец";
   }
 });
 
-
 // Вариант-2
-
 const input = document.querySelector("#name-input");
 const span = document.querySelector("#name-output");
 
@@ -32,3 +29,13 @@ function inputData(event) {
     span.textContent = "незнакомец";
   }
 }
+
+// Вариант-3(G.G)
+const refs = {
+  userInput: document.querySelector("#name-input"),
+  output: document.querySelector("#name-output")
+};
+
+refs.userInput.addEventListener("input", () => {
+  refs.output.textContent = refs.userInput.value || "незнакомец";
+});
